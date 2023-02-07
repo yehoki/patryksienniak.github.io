@@ -4,9 +4,7 @@ import Header from '@/components/Header'
 import { useState } from 'react'
 
 import type { ReactElement } from 'react';
-
-
-
+import Bestsellers from '@/components/Bestsellers';
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -24,7 +22,7 @@ export default function Home() {
       </Head>
       <Header/>
       <section id="bestsellers">
-        Bestsellers
+        <Bestsellers/>
       </section>
       {/* FOOTER */}
       <div>
