@@ -1,10 +1,12 @@
 import axios from "axios";
 
-// Functions used to route to the request - will have to reuse them for changing user
-// data later on
 
-const baseUrl = 'http://localhost:3000/api';
+// Axios used to route the requests to the correct API - essentially sending the API requests and returning the data
 
+// NOTE: change this later - this is very general - will need to look for specific book and user API requests separately
+
+// Alternatively can change the url each time
+const baseUrl = 'http://localhost:3000/api/books';
 const getAll = async () => {
     return await axios.get(baseUrl);
 }

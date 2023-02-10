@@ -2,9 +2,21 @@ import Link from "next/link";
 import React from "react";
 import { FaSearch } from "react-icons/fa";
 type Props = {};
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import AppBar from '@mui/material/AppBar';
+import { Toolbar } from "@mui/material";
 
 function Header({}: Props) {
   return (
+    <>
+
+    <AppBar position="static" className="bg-[#616247FF] ">
+      <Toolbar>
+        1234 TEST
+      </Toolbar>
+    </AppBar>
+
     <header className="sticky top-0 flex mx-auto max-w-screen justify-between bg-[#616247FF] p-2">
       <div className="flex flex-row items-center">
         <Link href="/">
@@ -40,6 +52,7 @@ function Header({}: Props) {
 
       
     </header>
+    </>
   );
 }
 
