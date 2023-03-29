@@ -24,15 +24,18 @@ export default async function handler(
       break;
     case "POST":
       try {
-        const { username, name, password } = req.body;
+        const { username, name, password, books } = req.body;
         const saltRounds = 10;
         const passwordHash = await bcrypt.hash(password, saltRounds);
+        console.log(books);
         const user = new User({
           username,
           name,
           passwordHash,
+          books
         });
         console.log(user);
+        console.log(books[0]);
         const savedUser = await user.save();
         console.log(savedUser);
         res.status(201).json(savedUser);

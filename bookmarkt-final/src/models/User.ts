@@ -10,7 +10,12 @@ const userSchema = new mongoose.Schema({
         unique: true
     },
     name: String,
-    passwordHash: String
+    passwordHash: String,
+    books: {
+      type: [{
+      id: String,
+      currentPage: Number}],
+    }
 })
 
 userSchema.set('toJSON', {
@@ -19,6 +24,9 @@ userSchema.set('toJSON', {
       delete returnedObject._id
       delete returnedObject.__v
       delete returnedObject.passwordHash
+      returnedObject.books.map((item:any) => {
+        delete item._id
+      })
     }
   })
 

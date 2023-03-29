@@ -6,8 +6,19 @@ export type userType = {
   token: string,
   username: string,
   name: string,
-  id: string
+  id: string,
+  books: {
+    id: string,
+    currentPage: number
+  }[]
 }
+
+
+
+export type bookType = {
+  name: String,
+  author: String 
+};
 
 export type messageType = {
   alert: AlertColor;  message: string

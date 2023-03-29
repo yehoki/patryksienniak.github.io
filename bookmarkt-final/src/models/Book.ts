@@ -6,8 +6,7 @@ mongoose.set(`strictQuery`, false);
 
 const bookSchema = new mongoose.Schema({
   name: String,
-  author: String,
-  currentPage: Number,
+  author: String
 });
 
 bookSchema.set(`toJSON`, {

@@ -7,19 +7,22 @@ import axios from "axios";
 
 // Alternatively can change the url each time
 const baseUrl = 'http://localhost:3000/api/books';
+
+
+// Get all books
 const getAll = async () => {
     return await axios.get(baseUrl);
 }
-
+// Get a book by ID
 const getOne = async(id:string) => {
     return await axios.get(`${baseUrl}/${id}`);
 }
-
+// Create a new book
 const create = async (newObject:any) => {
     return await axios.post(baseUrl, newObject);
 }
 
-// Axios sends a DELETE request, to the url with the relevant ID
+// Delete a book based on its ID
 const dropBook = async (id:string) => {
     return await axios.delete(`${baseUrl}/${id}`);
 }

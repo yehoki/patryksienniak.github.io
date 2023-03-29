@@ -1,11 +1,7 @@
 import axios from "axios";
 const baseUrl = '/api/users';
-
-type userType = {
-    username: string;
-    name: string;
-    password: string;
-}
+import { userType
+ } from "@/types/types";
 
 const createUser = async (userDetails: userType) => {
     const res = await axios.post(baseUrl, userDetails);

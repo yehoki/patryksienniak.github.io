@@ -65,6 +65,7 @@ export default async function handler(
           username: user.username,
           name: user.name,
           id: user._id,
+          books: user.books
         });
         
         break;
